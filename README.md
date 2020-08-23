@@ -23,4 +23,14 @@ TIMEOUT=300 # 300s
 IPSET_HASH_NAME=ip_block
 ipset create $IPSET_HASH_NAME hash:ip
 ipset add -exist $IPSET_HASH_NAME ${ip=要封禁的ip} timeout $TIMEOUT
+ipset del $IPSET_HASH_NAME x.x.x.x
+ipset list $IPSET_HASH_NAME
+ipset list
+ipset flush $IPSET_HASH_NAME
+ipset flush
+ipset destroy $IPSET_HASH_NAME
+ipset destroy
+ipset save $IPSET_HASH_NAME
+ipset save
+ipset restore
 ```
